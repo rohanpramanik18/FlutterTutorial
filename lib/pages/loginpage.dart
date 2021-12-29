@@ -2,7 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:trialapp/pages/homepage.dart';
 import 'package:trialapp/utils/routes.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  bool changeState = false;
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -51,22 +57,53 @@ class LoginPage extends StatelessWidget {
                 ],
               ),
             ),
-            ElevatedButton(
-              onPressed: () => {
-                Navigator.pushNamed(context, MyRoutes.routeHome),
+
+            InkWell(
+              onTap: () async {
+                setState(() {
+                  changeState = true;
+                });
+
+                await Future.delayed(Duration(seconds: 1));
+                Navigator.pushNamed(context, MyRoutes.routeHome);
               },
-              child: Text(
-                "Login",
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w600,
+              child: AnimatedContainer(
+                duration: Duration(seconds: 1),
+                height: changeState ? 50 : 50,
+                width: changeState ? 50 : 100,
+                alignment: Alignment.center,
+                child: changeState
+                    ? Icon(Icons.done)
+                    : Text(
+                        "Login",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                decoration: BoxDecoration(
+                  color: Colors.red,
+                  borderRadius: BorderRadius.circular(changeState ? 20 : 8),
                 ),
               ),
-              style: TextButton.styleFrom(
-                elevation: 10,
-                minimumSize: Size(100, 50),
-              ),
-            )
+            ),
+            // ElevatedButton(
+            //   onPressed: () => {
+            //     Navigator.pushNamed(context, MyRoutes.routeHome),
+            //   },
+            //   child: Text(
+            //     "Login",
+            //     style: TextStyle(
+            //       fontSize: 18,
+            //       fontWeight: FontWeight.w600,
+            //     ),
+            //   ),
+            //   style: TextButton.styleFrom(
+            //     elevation: 10,
+            //     minimumSize: Size(100, 50),
+            //   ),
+            // )
           ],
         ),
       ),
