@@ -9,6 +9,7 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   bool changeState = false;
+  String name = '';
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -23,8 +24,8 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(
               height: 25,
             ),
-            const Text(
-              "Welcome",
+            Text(
+              "Welcome $name",
               style: TextStyle(
                 fontSize: 35,
                 fontFamily: 'Raleway',
@@ -36,6 +37,7 @@ class _LoginPageState extends State<LoginPage> {
               child: Column(
                 children: [
                   TextFormField(
+                    onChanged: (value) => {name = value, setState(() {})},
                     decoration: InputDecoration(
                       label: Text(
                         'Username',
@@ -58,33 +60,33 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
 
-            InkWell(
-              onTap: () async {
-                setState(() {
-                  changeState = true;
-                });
+            Material(
+              color: Colors.blue,
+              borderRadius: BorderRadius.circular(changeState ? 20 : 8),
+              child: InkWell(
+                onTap: () async {
+                  setState(() {
+                    changeState = true;
+                  });
 
-                await Future.delayed(Duration(seconds: 1));
-                Navigator.pushNamed(context, MyRoutes.routeHome);
-              },
-              child: AnimatedContainer(
-                duration: Duration(seconds: 1),
-                height: changeState ? 50 : 50,
-                width: changeState ? 50 : 100,
-                alignment: Alignment.center,
-                child: changeState
-                    ? Icon(Icons.done)
-                    : Text(
-                        "Login",
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
+                  await Future.delayed(Duration(seconds: 1));
+                  Navigator.pushNamed(context, MyRoutes.routeHome);
+                },
+                child: AnimatedContainer(
+                  duration: Duration(seconds: 1),
+                  height: changeState ? 50 : 50,
+                  width: changeState ? 50 : 100,
+                  alignment: Alignment.center,
+                  child: changeState
+                      ? Icon(Icons.done)
+                      : Text(
+                          "Login",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
                         ),
-                      ),
-                decoration: BoxDecoration(
-                  color: Colors.red,
-                  borderRadius: BorderRadius.circular(changeState ? 20 : 8),
                 ),
               ),
             ),
