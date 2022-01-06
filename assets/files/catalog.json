@@ -1,0 +1,76 @@
+{
+    "products" : [
+        {
+            "id": 1,
+            "name": "IPhone 13 Pro",
+            "desc": "Apple Touchscreen 12th generation phone",
+            "price": 2000,
+            "color": "#cc99ff",
+            "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-pro-family-hero?wid=470&hei=556&fmt=png-alpha&.v=1631220221000"
+        },
+
+        {
+            "id": 2,
+            "name": "Poco M2 Pro",
+            "desc": "Xiomi Poco Snapdragon 720g phone",
+            "price": 700,
+            "color": "##80ffaa",
+            "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRfW6cpPOFuHuVo8AW7BKwX1INvJftNRxsACsVk23LQJHoKLZPjSICJ4YJUcydH0ss8KIiYpj56Hez3TZLWsIR4FnQshRhi"
+        },
+
+        {
+            "id": 3,
+            "name": "Samsung Galaxy Z Fold3",
+            "desc": "5G powered by Qualcomm Snapdragon 888 Octa-Core processor",
+            "price": 1500,
+            "color": "#ffff4d",
+            "image": "https://m.media-amazon.com/images/I/71MmJNwZcML._SL1500_.jpg"
+        },
+
+        {
+            "id": 4,
+            "name": "OnePlus 9R 5G",
+            "desc": "Qualcomm Snapdragon 870 5G with upgraded Qualcomm Kryo 585 CPU",
+            "price": 850,
+            "color": "#4dff4d",
+            "image": "https://m.media-amazon.com/images/I/61IwksZ-DGL._SL1500_.jpg"
+        },
+
+        {
+            "id": 5,
+            "name": "Nokia G20 Smartphone",
+            "desc": "A 48 MP quad camera with powerful AI imaging modes",
+            "price": 500,
+            "color": "#b8b894",
+            "image": "https://m.media-amazon.com/images/I/61NoYt2pvpS._SL1500_.jpg"
+        },
+
+        {
+            "id": 6,
+            "name": "Motorola Moto G 5G",
+            "desc": "16.94 cm (6.67 inch) Full HD+ Display",
+            "price": 750,
+            "color": "#bf80ff",
+            "image": "https://m.media-amazon.com/images/I/31hUFOy9dnL.jpg"
+        },
+
+        {
+            "id": 7,
+            "name": "Redmi 10 Prime",
+            "desc": "MediaTek Helio G88 Octa-core processor with HyperEngine 2.0",
+            "price": 1350,
+            "color": "#ffdb4d",
+            "image": "https://m.media-amazon.com/images/I/71q297sVv3L._SL1500_.jpg"
+        },
+
+        {
+            "id": 8,
+            "name": "Realme narzo 30",
+            "desc": "6 GB RAM 128 GB ROM Expandable Upto 256 GB",
+            "price": 450,
+            "color": "#ff8080",
+            "image": "https://m.media-amazon.com/images/I/71AwWtT5AUL._SL1500_.jpg"
+        }
+
+    ]
+}
